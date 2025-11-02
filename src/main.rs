@@ -24,7 +24,7 @@ fn main() {
         if let Ok(entry_dir) = current_dir(){
             if let Some(entry_str) = entry_dir.to_str(){
                 let dir_list = traverse_mult(String::from(entry_str), max_thread_count);
-                // dir_list.iter().for_each(|value|{println!("{}", value)});
+                dir_list.iter().for_each(|value|{println!("{}", value)});
                 len2 = dir_list.len();
             }
         }
